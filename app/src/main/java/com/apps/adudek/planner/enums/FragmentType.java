@@ -13,7 +13,7 @@ public enum FragmentType {
     MAIN,
 
     /**
-     * fragment that contains add panel, where you can add new event
+     * fragment that contains add panel, where you can add new Event
      */
 
     ADD,
