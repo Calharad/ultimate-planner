@@ -18,16 +18,30 @@ public class ToDoElement implements Entity {
 
     public static final String _DONE = "done";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public void setText(String text) {
+        this.text = text;
     }
 
-    //TODO: getter/setter + other
+    public void setDone(boolean done) {
+        this.done = done;
+    }
 
-    private int id;
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
 
-    private int ToDoListId;
+    public int getPriority() {
+        return priority;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public boolean isDone()
+    {
+        return done;
+    }
 
     private String text;
 

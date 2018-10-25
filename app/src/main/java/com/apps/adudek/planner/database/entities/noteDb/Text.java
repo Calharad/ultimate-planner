@@ -20,16 +20,37 @@ public class Text implements Entity {
 
     public static final String _SIZE_X = "sizeX";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public String getText() {
+        return text;
     }
 
-    //TODO: getter/setter + other
+    public void setText(String text) {
+        this.text = text;
+    }
 
-    private int id;
+    public int getSizeX() {
+        return sizeX;
+    }
 
-    private int noteId;
+    public int getPosY() {
+        return posY;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setSizeX(int sizeX) {
+        this.sizeX = sizeX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
 
     private String text;
 

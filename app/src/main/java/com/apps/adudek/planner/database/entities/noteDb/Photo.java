@@ -18,22 +18,35 @@ public class Photo implements Entity {
 
     public static final String _SCALE = "scale";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    //TODO:getter/setter + other
+    public void setBytecode(byte[] bytecode) {
+        this.bytecode = bytecode;
+    }
 
-    private int id;
+    public void setScale(float scale) {
+        this.scale = scale;
+    }
 
-    private int noteId;
+    public String getDescription() {
+        return description;
+    }
+
+    public byte[] getBytecode() {
+        return bytecode;
+    }
+
+    public float getScale() {
+        return scale;
+    }
 
     private String description;
 
     //TODO: get info about using Images
 
-    private String bytecode;
+    private byte[] bytecode;
 
     private float scale;
 }

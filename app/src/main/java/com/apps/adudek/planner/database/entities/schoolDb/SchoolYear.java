@@ -2,7 +2,9 @@ package com.apps.adudek.planner.database.entities.schoolDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
+import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -22,16 +24,41 @@ public class SchoolYear implements Entity {
 
     public static final String _SEM_E_DATE = "semestery_end_date";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData
+    public Date getEndDate() {
+        return endDate;
     }
 
-    //TODO: getter/setter
+    public Date getBeginDate() {
+        return beginDate;
+    }
 
-    private int id;
+    public Date getSemesteryEndDate() {
+        return semesteryEndDate;
+    }
 
-    private int schoolId;
+    public int getYearNumber() {
+        return yearNumber;
+    }
+
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setSemesteryEndDate(Date semesteryEndDate) {
+        this.semesteryEndDate = semesteryEndDate;
+    }
+
+    public void setYearNumber(int yearNumber) {
+        this.yearNumber = yearNumber;
+    }
+
+    public ChildArray<Subject> getSubjectChildren() {
+        return subjectChildren;
+    }
 
     private int yearNumber;
 
@@ -40,4 +67,7 @@ public class SchoolYear implements Entity {
     private Date endDate;
 
     private Date semesteryEndDate;
+
+    private ChildArray<Subject> subjectChildren = new ChildArray<>();
+
 }

@@ -2,6 +2,7 @@ package com.apps.adudek.planner.database.entities.studentDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
@@ -20,20 +21,39 @@ public class Lesson implements Entity {
 
     public static final String _NOTE = "note";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public Date getBeginDate() {
+        return beginDate;
     }
 
-    //TODO: getter/setter + other
+    public Date getEndDate() {
+        return endDate;
+    }
 
-    private int id;
+    public String getNote() {
+        return note;
+    }
 
-    private int moduleId;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public ChildArray<Aborted> getAbortedChildren() {
+        return abortedChildren;
+    }
 
     private Date beginDate;
 
     private Date endDate;
 
     private String note;
+
+    private ChildArray<Aborted> abortedChildren = new ChildArray<>();
 }

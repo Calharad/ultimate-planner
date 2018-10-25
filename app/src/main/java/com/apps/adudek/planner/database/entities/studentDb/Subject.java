@@ -2,7 +2,10 @@ package com.apps.adudek.planner.database.entities.studentDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
+import com.apps.adudek.planner.database.entities.eventDb.Event;
+import com.apps.adudek.planner.database.entities.noteDb.Note;
 
 public class Subject implements Entity {
 
@@ -20,16 +23,45 @@ public class Subject implements Entity {
 
     public static final String _MANDATORY = "mandatory";
 
-    @Override
-    public void setData(Cursor cursor) {
-    //TODO: setData method
+    public void setName(String name) {
+        this.name = name;
     }
 
-    //TODO: getter/setter + other
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
 
-    private int id;
+    public void setMandatory(boolean mandatory) {
+        this.mandatory = mandatory;
+    }
 
-    private int semesteryId;
+    public void setFinalGrade(String finalGrade) {
+        this.finalGrade = finalGrade;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public String getFinalGrade() {
+        return finalGrade;
+    }
+
+    public ChildArray<Event> getEventChildren() {
+        return eventChildren;
+    }
+
+    public ChildArray<Note> getNoteChildren() {
+        return noteChildren;
+    }
+
+    public ChildArray<Module> getModuleChildren() {
+        return moduleChildren;
+    }
 
     private String name;
 
@@ -38,4 +70,11 @@ public class Subject implements Entity {
     private String finalGrade;
 
     private boolean mandatory;
+
+    private ChildArray<Module> moduleChildren = new ChildArray<>();
+
+    private ChildArray<Event> eventChildren = new ChildArray<>();
+
+    private ChildArray<Note> noteChildren = new ChildArray<>();
+
 }

@@ -2,6 +2,7 @@ package com.apps.adudek.planner.database.entities.noteDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 public class ToDoList implements Entity {
@@ -20,16 +21,41 @@ public class ToDoList implements Entity {
 
     public static final String _SIZE_X = "sizeX";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public ChildArray<ToDoElement> getToDoElementChildren() {
+        return toDoElementChildren;
     }
 
-    //TODO: getter/setter + other
+    public String getTitle() {
+        return title;
+    }
 
-    private int id;
+    public int getPosX() {
+        return posX;
+    }
 
-    private int noteId;
+    public int getPosY() {
+        return posY;
+    }
+
+    public int getSizeX() {
+        return sizeX;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    public void setSizeX(int sizeX) {
+        this.sizeX = sizeX;
+    }
 
     private String title;
 
@@ -38,5 +64,7 @@ public class ToDoList implements Entity {
     private int posY;
 
     private int sizeX;
+
+    private ChildArray<ToDoElement> toDoElementChildren = new ChildArray<>();
 
 }

@@ -2,6 +2,7 @@ package com.apps.adudek.planner.database.entities.studentDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 public class FieldOfStudy implements Entity {
@@ -12,12 +13,19 @@ public class FieldOfStudy implements Entity {
 
     public static final String _NAME = "name";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public String getName() {
+        return name;
     }
 
-    private int id;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ChildArray<Semestery> getSemesteryChildren() {
+        return semesteryChildren;
+    }
 
     private String name;
+
+    private ChildArray<Semestery> semesteryChildren = new ChildArray<>();
 }

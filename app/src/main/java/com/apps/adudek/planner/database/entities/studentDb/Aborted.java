@@ -20,16 +20,29 @@ public class Aborted implements Entity {
 
     public static final String _NEW_E_DATE = "new_end_date";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData
+    public String getDescription() {
+        return description;
     }
 
-    //TODO: getter/setter
+    public Date getNewBeginDate() {
+        return newBeginDate;
+    }
 
-    private int id;
+    public Date getNewEndDate() {
+        return newEndDate;
+    }
 
-    private int lessonId;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setNewBeginDate(Date newBeginDate) {
+        this.newBeginDate = newBeginDate;
+    }
+
+    public void setNewEndDate(Date newEndDate) {
+        this.newEndDate = newEndDate;
+    }
 
     private String description;
 

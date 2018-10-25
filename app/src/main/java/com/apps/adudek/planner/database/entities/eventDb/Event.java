@@ -2,7 +2,9 @@ package com.apps.adudek.planner.database.entities.eventDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
+import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -20,20 +22,49 @@ public class Event implements Entity {
 
     public static final String _E_DATE = "end_date";
 
-    @Override
-    public void setData(Cursor cursor) {
-    //TODO: setData method
+    public ChildArray<EventReminder> getEventReminderChildren() {
+        return eventReminderChildren;
     }
 
-    //TODO: getter/setter + other
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
+    }
 
-    private int id;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Date getBeginDate() {
+        return beginDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 
     private String title;
 
     private String description;
 
-    private Date begin_date;
+    private Date beginDate;
 
-    private Date end_date;
+    private Date endDate;
+
+    private ChildArray<EventReminder> eventReminderChildren = new ChildArray<>();
 }

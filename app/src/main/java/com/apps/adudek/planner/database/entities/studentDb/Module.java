@@ -2,13 +2,14 @@ package com.apps.adudek.planner.database.entities.studentDb;
 
 import android.database.Cursor;
 
+import com.apps.adudek.planner.database.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
 public class Module implements Entity {
 
-    public static final String _TABLE = "\"module\"";
+    public static final String _TABLE = "module";
 
     public static final String _ID = "id_module";
 
@@ -26,26 +27,78 @@ public class Module implements Entity {
 
     public static final String _FREQ = "frequency";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+
+
+    public boolean isMandatory()
+    {
+        return mandatory;
     }
 
-    //TODO:getter/setter + other
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
 
-    private int id;
+    public void setMandatory(boolean mandatory) {
+        this.mandatory = mandatory;
+    }
 
-    private int subjectId;
+    public void setFinalGrade(String finalGrade) {
+        this.finalGrade = finalGrade;
+    }
+
+    public void setBeginHour(Date beginHour) {
+        this.beginHour = beginHour;
+    }
+
+    public void setEndHour(Date endHour) {
+        this.endHour = endHour;
+    }
+
+    public void setWeekDay(int weekDay) {
+        this.weekDay = weekDay;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    public String getFinalGrade() {
+        return finalGrade;
+    }
+
+    public Date getBeginHour() {
+        return beginHour;
+    }
+
+    public Date getEndHour() {
+        return endHour;
+    }
+
+    public int getWeekDay() {
+        return weekDay;
+    }
+
+    public ChildArray<Lesson> getLessonChildren() {
+        return lessonChildren;
+    }
+
+    public ChildArray<Grade> getGradeChildren() {
+        return gradeChildren;
+    }
 
     private boolean mandatory;
 
-    public String final_grade;
+    private String finalGrade;
 
-    public int week_day;
+    private int weekDay;
 
-    public Date begin_hour;
+    private Date beginHour;
 
-    public Date end_hour;
+    private Date endHour;
 
-    public int frequency;
+    private int frequency;
+
+    private ChildArray<Grade> gradeChildren = new ChildArray<>();
+
+    private ChildArray<Lesson> lessonChildren = new ChildArray<>();
 }

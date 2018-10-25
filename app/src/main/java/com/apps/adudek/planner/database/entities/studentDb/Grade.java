@@ -16,16 +16,21 @@ public class Grade implements Entity {
 
     public static final String _PRIORITY = "priority";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData
+    public String getDescription() {
+        return description;
     }
 
-    //TODO: getter/setter + other
+    public int getPriority() {
+        return priority;
+    }
 
-    private int id;
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    private int moduleId;
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
 
     private String description;
 

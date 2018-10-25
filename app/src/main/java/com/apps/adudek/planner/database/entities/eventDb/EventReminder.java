@@ -3,6 +3,7 @@ package com.apps.adudek.planner.database.entities.eventDb;
 import android.database.Cursor;
 
 import com.apps.adudek.planner.database.entities.Entity;
+import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -18,16 +19,21 @@ public class EventReminder implements Entity {
 
     public static final String _DESC = "description";
 
-    @Override
-    public void setData(Cursor cursor) {
-        //TODO: setData method
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    //TODO: getter/setter + other
+    public void setRemindDate(Date remindDate) {
+        this.remindDate = remindDate;
+    }
 
-    private int id;
+    public Date getRemindDate() {
+        return remindDate;
+    }
 
-    private int eventId;
+    public String getDescription() {
+        return description;
+    }
 
     private Date remindDate;
 
