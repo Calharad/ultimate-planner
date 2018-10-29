@@ -1,13 +1,13 @@
 package com.apps.adudek.planner.database.entities.studentDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
-public class Lesson implements Entity {
+public class SLesson implements Entity {
 
     public static final String _TABLE = "lesson";
 
@@ -41,12 +41,8 @@ public class Lesson implements Entity {
         this.beginDate = beginDate;
     }
 
-    public void setNote(String note) {
+    public void setNote(@Nullable String note) {
         this.note = note;
-    }
-
-    public ChildArray<Aborted> getAbortedChildren() {
-        return abortedChildren;
     }
 
     private Date beginDate;
@@ -54,6 +50,4 @@ public class Lesson implements Entity {
     private Date endDate;
 
     private String note;
-
-    private ChildArray<Aborted> abortedChildren = new ChildArray<>();
 }

@@ -1,8 +1,8 @@
 package com.apps.adudek.planner.database.entities.schoolDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 import com.apps.adudek.planner.database.entities.eventDb.Event;
 import com.apps.adudek.planner.database.entities.noteDb.Note;
@@ -39,7 +39,7 @@ public class Subject implements Entity {
         return semesteryGrade;
     }
 
-    public void setFinalGrade(String finalGrade) {
+    public void setFinalGrade(@Nullable String finalGrade) {
         this.finalGrade = finalGrade;
     }
 
@@ -47,7 +47,7 @@ public class Subject implements Entity {
         this.mandatory = mandatory;
     }
 
-    public void setSemesteryGrade(String semesteryGrade) {
+    public void setSemesteryGrade(@Nullable String semesteryGrade) {
         this.semesteryGrade = semesteryGrade;
     }
 

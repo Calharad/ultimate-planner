@@ -1,6 +1,6 @@
 package com.apps.adudek.planner.database.entities.noteDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
@@ -18,11 +18,11 @@ public class Photo implements Entity {
 
     public static final String _SCALE = "scale";
 
-    public void setDescription(String description) {
+    public void setDescription(@Nullable String description) {
         this.description = description;
     }
 
-    public void setBytecode(byte[] bytecode) {
+    public void setBytecode(@Nullable byte[] bytecode) {
         this.bytecode = bytecode;
     }
 

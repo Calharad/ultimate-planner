@@ -1,10 +1,9 @@
 package com.apps.adudek.planner.database.entities.noteDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
-import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -32,7 +31,7 @@ public class Note implements Entity {
         return toDoListChildren;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(@Nullable String description) {
         this.description = description;
     }
 

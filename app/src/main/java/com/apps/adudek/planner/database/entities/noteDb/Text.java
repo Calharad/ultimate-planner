@@ -1,6 +1,6 @@
 package com.apps.adudek.planner.database.entities.noteDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
@@ -24,7 +24,7 @@ public class Text implements Entity {
         return text;
     }
 
-    public void setText(String text) {
+    public void setText(@Nullable String text) {
         this.text = text;
     }
 

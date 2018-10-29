@@ -10,6 +10,8 @@ public class DateConverter {
 
     public static final String DEFAULT_FORMAT = "yyyy-mm-dd' 'hh:mm";
 
+    public static final String HOUR_FORMAT = "hh:mm";
+
     public static Date fromStringToDate(String input, String format)
     {
         @SuppressLint("SimpleDateFormat")

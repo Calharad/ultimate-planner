@@ -1,8 +1,8 @@
 package com.apps.adudek.planner.database.entities.noteDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 public class ToDoList implements Entity {
@@ -41,7 +41,7 @@ public class ToDoList implements Entity {
         return sizeX;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(@Nullable String title) {
         this.title = title;
     }
 

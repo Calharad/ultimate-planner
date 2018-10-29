@@ -1,10 +1,9 @@
 package com.apps.adudek.planner.database.entities.eventDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
-import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -30,11 +29,11 @@ public class Event implements Entity {
         this.beginDate = beginDate;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(@Nullable String description) {
         this.description = description;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(@Nullable Date endDate) {
         this.endDate = endDate;
     }
 

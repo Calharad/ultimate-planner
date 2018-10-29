@@ -1,10 +1,9 @@
-package com.apps.adudek.planner.database;
+package com.apps.adudek.planner.database.entities;
 
 
 import android.util.SparseArray;
 
-import com.apps.adudek.planner.database.entities.ChildCommand;
-import com.apps.adudek.planner.database.entities.Entity;
+import com.apps.adudek.planner.database.ChildCommand;
 
 public class ChildArray <T extends Entity> {
 

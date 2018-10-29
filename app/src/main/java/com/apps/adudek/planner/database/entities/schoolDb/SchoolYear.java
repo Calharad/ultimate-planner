@@ -1,10 +1,7 @@
 package com.apps.adudek.planner.database.entities.schoolDb;
 
-import android.database.Cursor;
-
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
-import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 

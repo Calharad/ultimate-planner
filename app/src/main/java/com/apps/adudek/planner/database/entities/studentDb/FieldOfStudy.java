@@ -1,8 +1,6 @@
 package com.apps.adudek.planner.database.entities.studentDb;
 
-import android.database.Cursor;
-
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 public class FieldOfStudy implements Entity {

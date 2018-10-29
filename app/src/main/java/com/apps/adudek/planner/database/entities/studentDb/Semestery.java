@@ -1,10 +1,7 @@
 package com.apps.adudek.planner.database.entities.studentDb;
 
-import android.database.Cursor;
-
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
-import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -46,7 +43,7 @@ public class Semestery implements Entity {
         this.semNumber = semNumber;
     }
 
-    public ChildArray<Subject> getSubjectChildren() {
+    public ChildArray<SSubject> getSubjectChildren() {
         return subjectChildren;
     }
 
@@ -56,6 +53,6 @@ public class Semestery implements Entity {
 
     private Date endDate;
 
-    private ChildArray<Subject> subjectChildren = new ChildArray<>();
+    private ChildArray<SSubject> subjectChildren = new ChildArray<>();
 
 }

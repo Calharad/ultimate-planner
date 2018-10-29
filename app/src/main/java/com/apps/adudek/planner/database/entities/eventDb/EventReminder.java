@@ -1,9 +1,8 @@
 package com.apps.adudek.planner.database.entities.eventDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
-import com.apps.adudek.planner.others.DateConverter;
 
 import java.util.Date;
 
@@ -19,7 +18,7 @@ public class EventReminder implements Entity {
 
     public static final String _DESC = "description";
 
-    public void setDescription(String description) {
+    public void setDescription(@Nullable String description) {
         this.description = description;
     }
 

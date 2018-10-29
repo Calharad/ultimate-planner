@@ -1,10 +1,10 @@
 package com.apps.adudek.planner.database.entities.studentDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class Grade implements Entity {
+public class SGrade implements Entity {
 
     public static final String _TABLE = "grade";
 
@@ -24,7 +24,7 @@ public class Grade implements Entity {
         return priority;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(@Nullable String description) {
         this.description = description;
     }
 

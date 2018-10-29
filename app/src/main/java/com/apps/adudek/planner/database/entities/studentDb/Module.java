@@ -1,8 +1,8 @@
 package com.apps.adudek.planner.database.entities.studentDb;
 
-import android.database.Cursor;
+import android.support.annotation.Nullable;
 
-import com.apps.adudek.planner.database.ChildArray;
+import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
@@ -42,7 +42,7 @@ public class Module implements Entity {
         this.mandatory = mandatory;
     }
 
-    public void setFinalGrade(String finalGrade) {
+    public void setFinalGrade(@Nullable String finalGrade) {
         this.finalGrade = finalGrade;
     }
 
@@ -78,11 +78,11 @@ public class Module implements Entity {
         return weekDay;
     }
 
-    public ChildArray<Lesson> getLessonChildren() {
+    public ChildArray<SLesson> getLessonChildren() {
         return lessonChildren;
     }
 
-    public ChildArray<Grade> getGradeChildren() {
+    public ChildArray<SGrade> getGradeChildren() {
         return gradeChildren;
     }
 
@@ -98,7 +98,7 @@ public class Module implements Entity {
 
     private int frequency;
 
-    private ChildArray<Grade> gradeChildren = new ChildArray<>();
+    private ChildArray<SGrade> gradeChildren = new ChildArray<>();
 
-    private ChildArray<Lesson> lessonChildren = new ChildArray<>();
+    private ChildArray<SLesson> lessonChildren = new ChildArray<>();
 }
