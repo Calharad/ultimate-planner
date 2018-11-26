@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class ToDoList implements Entity {
+public class ToDoList extends Entity {
 
     public static final String _TABLE = "todo_list";
 
@@ -57,13 +57,13 @@ public class ToDoList implements Entity {
         this.sizeX = sizeX;
     }
 
-    private String title;
+    private String title = null;
 
-    private int posX;
+    private int posX = -1;
 
-    private int posY;
+    private int posY = -1;
 
-    private int sizeX;
+    private int sizeX = -1;
 
     private ChildArray<ToDoElement> toDoElementChildren = new ChildArray<>();
 

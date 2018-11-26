@@ -6,7 +6,7 @@ import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
-public class EventReminder implements Entity {
+public class EventReminder extends Entity {
 
     public static final String _TABLE = "event_reminder";
 

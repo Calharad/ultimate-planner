@@ -5,7 +5,7 @@ import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
-public class Semestery implements Entity {
+public class Semestery extends Entity {
 
     public static final String _TABLE = "semestery";
 

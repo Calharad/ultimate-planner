@@ -4,7 +4,7 @@ import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class Photo implements Entity {
+public class Photo extends Entity {
 
     public static final String _TABLE = "photo";
 
@@ -42,11 +42,11 @@ public class Photo implements Entity {
         return scale;
     }
 
-    private String description;
+    private String description = null;
 
     //TODO: get info about using Images
 
-    private byte[] bytecode;
+    private byte[] bytecode = null;
 
-    private float scale;
+    private float scale = -1;
 }

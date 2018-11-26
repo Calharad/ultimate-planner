@@ -7,7 +7,7 @@ import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
-public class Event implements Entity {
+public class Event extends Entity {
 
     public static final String _TABLE = "event";
 
@@ -66,4 +66,18 @@ public class Event implements Entity {
     private Date endDate;
 
     private ChildArray<EventReminder> eventReminderChildren = new ChildArray<>();
+
+    @Override
+    protected void setRequiredColumns() {
+
+
+
+    }
+
+    @Override
+    protected void setOptionalColumns() {
+
+
+
+    }
 }

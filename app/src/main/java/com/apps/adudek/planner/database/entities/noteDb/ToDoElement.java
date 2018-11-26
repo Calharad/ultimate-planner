@@ -4,7 +4,7 @@ import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class ToDoElement implements Entity {
+public class ToDoElement extends Entity {
 
     public static final String _TABLE = "todo_element";
 
@@ -38,14 +38,14 @@ public class ToDoElement implements Entity {
         return text;
     }
 
-    public boolean isDone()
+    public Boolean isDone()
     {
         return done;
     }
 
-    private String text;
+    private String text = null;
 
-    private int priority;
+    private int priority = -1;
 
-    private boolean done;
+    private Boolean done = null;
 }

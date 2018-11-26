@@ -7,7 +7,7 @@ import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
-public class Note implements Entity {
+public class Note extends Entity {
 
     public static final String _TABLE = "note";
 
@@ -17,9 +17,9 @@ public class Note implements Entity {
 
     public static final String _DESC = "description";
 
-    public static final String _DATE = "date";
+    public static final String _DATE = "\"date\"";
 
-    public ChildArray<Text> getNoteChildren() {
+    public ChildArray<Text> getTextChildren() {
         return textChildren;
     }
 
@@ -55,11 +55,11 @@ public class Note implements Entity {
         return date;
     }
 
-    private String title;
+    private String title = null;
 
-    private String description;
+    private String description = null;
 
-    private Date date;
+    private Date date = null;
 
     private ChildArray<ToDoList> toDoListChildren = new ChildArray<>();
 

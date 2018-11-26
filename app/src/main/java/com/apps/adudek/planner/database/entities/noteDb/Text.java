@@ -4,7 +4,7 @@ import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class Text implements Entity {
+public class Text extends Entity {
 
     public static final String _TABLE = "text";
 
@@ -52,11 +52,11 @@ public class Text implements Entity {
         this.posX = posX;
     }
 
-    private String text;
+    private String text = null;
 
-    private int posX;
+    private int posX = -1;
 
-    private int posY;
+    private int posY = -1;
 
-    private int sizeX;
+    private int sizeX = -1;
 }

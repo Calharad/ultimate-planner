@@ -7,7 +7,7 @@ import com.apps.adudek.planner.database.entities.Entity;
 import com.apps.adudek.planner.database.entities.eventDb.Event;
 import com.apps.adudek.planner.database.entities.noteDb.Note;
 
-public class SSubject implements Entity {
+public class SSubject extends Entity {
 
     public static final String _TABLE = "subject";
 

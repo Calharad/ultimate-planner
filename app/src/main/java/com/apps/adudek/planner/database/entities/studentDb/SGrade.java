@@ -4,7 +4,7 @@ import android.support.annotation.Nullable;
 
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class SGrade implements Entity {
+public class SGrade extends Entity {
 
     public static final String _TABLE = "grade";
 

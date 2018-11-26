@@ -7,7 +7,7 @@ import com.apps.adudek.planner.database.entities.Entity;
 
 import java.util.Date;
 
-public class SLesson implements Entity {
+public class SLesson extends Entity {
 
     public static final String _TABLE = "lesson";
 

@@ -3,7 +3,7 @@ package com.apps.adudek.planner.database.entities.studentDb;
 import com.apps.adudek.planner.database.entities.ChildArray;
 import com.apps.adudek.planner.database.entities.Entity;
 
-public class FieldOfStudy implements Entity {
+public class FieldOfStudy extends Entity {
 
     public static final String _TABLE = "field_of_study";
 
